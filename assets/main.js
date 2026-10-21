@@ -1,4 +1,12 @@
 (() => {
+  const projectPrefix = location.hostname === 'amule-rh.github.io' && /^\/DesiresPlay(?:\/|$)/.test(location.pathname) ? '/DesiresPlay' : '';
+  const prefixPath = value => projectPrefix && value.startsWith('/') && !value.startsWith('//') && value !== projectPrefix && !value.startsWith(projectPrefix + '/') ? `${projectPrefix}${value}` : value;
+  if (projectPrefix) {
+    document.querySelectorAll('[href],[src]').forEach(element => ['href','src'].forEach(attribute => {
+      const value = element.getAttribute(attribute);
+      if (value) element.setAttribute(attribute, prefixPath(value));
+    }));
+  }
   const gate = document.getElementById('ageGate');
   const confirm = document.getElementById('confirmAge');
   const exit = document.getElementById('exitAge');
@@ -73,7 +81,9 @@
     '/en/legal/affiliate.html': '/afiliacion.html',
     '/en/legal/house-code.html': '/codigo-de-la-casa.html'
   };
-  let route = location.pathname.replace(/index\.html$/, '');
+  let pathname = location.pathname;
+  if (projectPrefix) pathname = pathname.slice(projectPrefix.length) || '/';
+  let route = pathname.replace(/index\.html$/, '');
   if (!route.startsWith('/')) route = `/${route}`;
   if (!route.endsWith('/') && !route.split('/').pop().includes('.')) route += '/';
   const header = document.querySelector('.site-header');
@@ -81,7 +91,7 @@
     const switcher = document.createElement('a');
     const english = route.startsWith('/en/');
     switcher.className = 'language-switch';
-    switcher.href = routePairs[route] || (english ? '/' : '/en/');
+    switcher.href = prefixPath(routePairs[route] || (english ? '/' : '/en/'));
     switcher.textContent = english ? 'ES' : 'EN';
     switcher.setAttribute('aria-label', english ? 'Ver en español' : 'View in English');
     const anchor = header.querySelector('.header-cta');
