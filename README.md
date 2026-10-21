@@ -1,23 +1,23 @@
 # DesirePlay — sitio estático para GitHub Pages
 
-Sitio bilingüe español/inglés hecho con HTML, CSS y JavaScript, sin build ni dependencias. Incluye age-gate en todas las rutas, páginas editoriales y legales, un catálogo de 15 juegos repartidos en tres sectores, cada uno con miniatura propia, instrucciones visibles en tres pasos, búsqueda, filtros y selección aleatoria. El catálogo incorpora dos recursos comerciales opcionales de Intimatify con enlaces Awin; los juegos sin producto pertinente conservan sus propuestas gratuitas.
+Sitio bilingüe español/inglés construido con HTML, CSS y JavaScript, sin herramientas de compilación ni dependencias de ejecución. La nueva dirección editorial combina fotografía original, guías adultas de bienestar, catálogo de juegos de lectura rápida y recomendaciones comerciales claramente opcionales.
+
+## Rediseño y estructura
+
+La portada ES/EN presenta la filosofía “conversación, curiosidad y respeto”, cinco áreas temáticas, conversación previa, una muestra de juegos, selección comercial con divulgación y llamadas a la acción. El catálogo reúne quince juegos en tres sectores; permite buscar, combinar filtros de intensidad, participantes y duración, elegir una sorpresa y guardar favoritos localmente en el navegador. Cada juego tiene ahora una página permanente en ambos idiomas con tres pasos, una pauta de consentimiento y una variación sencilla.
+
+Hay páginas editoriales bilingües para bienestar en pareja, juguetes íntimos, lubricación y cuidado, lencería, el Código de la Casa y la divulgación de afiliación. Los recursos editoriales propios están en `assets/redesign/`; la hoja visual y sus tokens se describen en [`REDESIGN.md`](REDESIGN.md).
 
 ## Publicación
 
-GitHub Pages publica desde `main` y la raíz en [amule-rh.github.io/DesiresPlay](https://amule-rh.github.io/DesiresPlay/). La canonical de las páginas está configurada como `https://desiresplay.online/`, pero, al actualizar este sitio, GitHub Pages no mostraba un dominio personalizado configurado. Para que esa dirección responda, habrá que añadir el dominio en **Settings → Pages** y configurar sus DNS.
+GitHub Pages publica desde `main`, en la raíz del repositorio, en [amule-rh.github.io/DesiresPlay](https://amule-rh.github.io/DesiresPlay/). Las etiquetas canonical conservan `https://desiresplay.online/`, pero GitHub Pages no muestra un dominio personalizado configurado. Para que esa dirección responda, habrá que añadir el dominio en **Settings → Pages** y configurar sus DNS.
 
-## Incluye
+## Incluye y criterios
 
-- Títulos, descripciones, canonical, Open Graph y enlaces alternativos de idioma.
-- JSON-LD `WebSite` en la portada y `Article` en categorías.
-- `robots.txt`, `sitemap.xml`, `404.html` y HTML rastreable.
-- Aviso de afiliación y enlaces con `sponsored`, `nofollow` y apertura en nueva pestaña.
-- Age-gate que conserva la confirmación durante la sesión: barrera básica, no verificación robusta de edad.
+Se mantienen HTML rastreable, metadatos canonical, Open Graph, enlaces `hreflang`, JSON-LD `WebSite` en portada y `Article` en las fichas nuevas, age-gate de 18 años durante la sesión, `robots.txt`, `sitemap.xml` y la página 404. El age-gate es una barrera básica, no una verificación robusta de edad. Las páginas nuevas permanecen estáticas; las únicas preferencias persistentes en el navegador son los favoritos de juegos.
+
+Los enlaces de afiliación Awin existentes se conservaron. Los productos siguen siendo opcionales, aparecen con divulgación y se enlazan desde recomendaciones pertinentes. La tienda controla precios, existencias y condiciones de compra.
 
 ## Antes de lanzar
 
-- Completa el responsable y contacto en `aviso-legal.html` y `privacidad.html`.
-- Revisa que las políticas reflejen las herramientas realmente usadas.
-- Verifica en Awin que los enlaces sigan activos y abran el producto esperado.
-- Añade el dominio a Search Console y envía `https://desiresplay.online/sitemap.xml`; el sitemap facilita el descubrimiento, pero no garantiza la indexación.
-- Añade enlaces comerciales solo si existe una ficha directa verificada y una relación clara con el contenido.
+Completa responsable y contacto en `aviso-legal.html` y `privacidad.html`; revisa que las políticas reflejen las herramientas realmente usadas; verifica en Awin que las fichas sigan activas; y, cuando el dominio esté configurado, envía el sitemap a Search Console. Añade enlaces comerciales solo cuando haya una ficha directa verificada y una relación clara con el contenido.
