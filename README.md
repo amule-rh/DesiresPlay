@@ -1,6 +1,6 @@
 # DesirePlay — versión estática para GitHub Pages
 
-Sitio estático HTML/CSS/JS, sin build ni dependencias. Incluye age-gate en todas las rutas HTML, páginas de categoría, cinco guías editoriales de juegos para adultos, SEO técnico básico, sitemap, robots.txt, páginas legales iniciales y los enlaces de afiliación Awin proporcionados (conservados sin cambios).
+Sitio estático bilingüe español/inglés en HTML/CSS/JS, sin build ni dependencias. Incluye age-gate en todas las rutas HTML, páginas de categoría, cinco guías editoriales y un catálogo filtrable de 15 juegos para adultos en tres sectores, SEO técnico básico, sitemap, robots.txt, páginas legales iniciales y los enlaces de afiliación Awin proporcionados (conservados sin cambios).
 
 ## Publicar en GitHub Pages
 1. Descomprime el ZIP.
