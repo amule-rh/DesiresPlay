@@ -68,3 +68,18 @@ html[lang^="en"] .site-header .brand::after,html[lang^="en"] .footer-brand::afte
 .surprise-button:disabled{opacity:.5;cursor:not-allowed;box-shadow:none;transform:none}
 .site-header a:focus-visible,.site-header button:focus-visible,.game-filter:focus-visible,.game-product a:focus-visible{outline:3px solid #dfbd73;outline-offset:3px;border-radius:3px}
 @media(max-width:640px){.site-header nav#mainNav{color:#59464f}.site-header nav#mainNav a{color:#59464f}.site-header nav#mainNav a:hover{color:#a12d58}}
+/* Fichas de juego: imagen clara + tres pasos, sin paneles escondidos. */
+.game-card{padding:18px;gap:0}
+.game-illustration{aspect-ratio:3/2;margin:-18px -18px 15px;overflow:hidden;background:#26141f;border-radius:8px 8px 0 0}
+.game-illustration img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.game-card:hover .game-illustration img{transform:scale(1.025)}
+.game-card h3{margin:11px 0 7px;font-size:clamp(1.18rem,1.45vw,1.42rem)}
+.game-card>p{font-size:.79rem;line-height:1.5;margin-bottom:12px}
+.game-steps{padding:12px 13px;margin:0 0 12px;background:#fffaf8;border:1px solid #efe1e4;border-radius:7px}
+.game-steps h4{margin:0 0 8px;color:#84304f;font-size:.62rem;font-weight:850;letter-spacing:.11em}
+.game-steps ol{list-style:none;counter-reset:step;margin:0;padding:0;display:grid;gap:7px}
+.game-steps li{counter-increment:step;position:relative;padding-left:25px;color:#5c4b52;font-size:.75rem;line-height:1.42}
+.game-steps li:before{content:counter(step);position:absolute;left:0;top:0;display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:#f0dfe4;color:#7d2948;font-size:.62rem;font-weight:800}
+.game-meta{margin-top:auto;padding-top:10px}
+.game-card-note{margin-top:7px;font-size:.64rem}
+@media(max-width:640px){.game-card{padding:15px}.game-illustration{margin:-15px -15px 13px;aspect-ratio:16/9}.game-card h3{font-size:1.35rem}.game-steps{padding:11px 12px}.game-steps li{font-size:.78rem}}

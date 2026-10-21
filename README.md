@@ -1,6 +1,6 @@
 # DesirePlay — sitio estático para GitHub Pages
 
-Sitio bilingüe español/inglés hecho con HTML, CSS y JavaScript, sin build ni dependencias. Incluye age-gate en todas las rutas, páginas editoriales y legales, un catálogo de 15 juegos repartidos en tres sectores, reglas rápidas, búsqueda, filtros y selección aleatoria. El catálogo incorpora dos recursos comerciales opcionales de Intimatify con enlaces Awin; los juegos sin producto pertinente conservan sus propuestas gratuitas.
+Sitio bilingüe español/inglés hecho con HTML, CSS y JavaScript, sin build ni dependencias. Incluye age-gate en todas las rutas, páginas editoriales y legales, un catálogo de 15 juegos repartidos en tres sectores, cada uno con miniatura propia, instrucciones visibles en tres pasos, búsqueda, filtros y selección aleatoria. El catálogo incorpora dos recursos comerciales opcionales de Intimatify con enlaces Awin; los juegos sin producto pertinente conservan sus propuestas gratuitas.
 
 ## Publicación
 
