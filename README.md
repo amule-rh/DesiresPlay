@@ -16,7 +16,7 @@ GitHub Pages publica desde `main`, en la raíz del repositorio, en [amule-rh.git
 
 Se mantienen HTML rastreable, metadatos canonical, Open Graph, enlaces `hreflang`, JSON-LD `WebSite` en portada y `Article` en las fichas nuevas, age-gate de 18 años durante la sesión, `robots.txt`, `sitemap.xml` y la página 404. El age-gate es una barrera básica, no una verificación robusta de edad. Las páginas nuevas permanecen estáticas; las únicas preferencias persistentes en el navegador son los favoritos de juegos.
 
-Los enlaces de afiliación Awin existentes se conservaron. Los productos siguen siendo opcionales, aparecen con divulgación y se enlazan desde recomendaciones pertinentes. La tienda controla precios, existencias y condiciones de compra.
+Las nuevas recomendaciones de afiliación se agruparon con el juego de dados o de retos que corresponda; el anillo Lovense Diamo aparece en la guía de juguetes íntimos. Todas son opciones prescindibles y llevan divulgación. Los enlaces de afiliación Awin existentes se conservaron. Los productos siguen siendo opcionales, aparecen con divulgación y se enlazan desde recomendaciones pertinentes. La tienda controla precios, existencias y condiciones de compra.
 
 ## Antes de lanzar
 
