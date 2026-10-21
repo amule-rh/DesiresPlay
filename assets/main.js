@@ -91,12 +91,44 @@
   const filters = [...document.querySelectorAll('.game-filter')];
   const games = [...document.querySelectorAll('.game-card')];
   if (filters.length && games.length) {
-    const applyFilter = (key) => {
-      filters.forEach(button => button.classList.toggle('is-active', button.dataset.filter === key));
-      games.forEach(card => { card.hidden = key !== 'all' && card.dataset.sector !== key; });
+    const search = document.getElementById('gameSearch');
+    const count = document.getElementById('gameCount');
+    const empty = document.getElementById('emptyGames');
+    const surprise = document.getElementById('surpriseGame');
+    const isEnglish = document.documentElement.lang.startsWith('en');
+    let activeFilter = 'all';
+    const applyFilter = () => {
+      const query = search?.value.trim().toLocaleLowerCase() || '';
+      filters.forEach(button => {
+        button.classList.toggle('is-active', button.dataset.filter === activeFilter);
+        button.setAttribute('aria-pressed', String(button.dataset.filter === activeFilter));
+      });
+      const visible = games.filter(card => {
+        const sectorMatch = activeFilter === 'all' || card.dataset.sector === activeFilter;
+        const searchMatch = !query || card.textContent.toLocaleLowerCase().includes(query);
+        card.hidden = !(sectorMatch && searchMatch);
+        return !card.hidden;
+      });
+      if (count) count.textContent = isEnglish ? `${visible.length} ${visible.length === 1 ? 'idea' : 'ideas'} shown` : `${visible.length} ${visible.length === 1 ? 'idea' : 'ideas'} visibles`;
+      if (empty) empty.hidden = visible.length > 0;
+      if (surprise) surprise.disabled = visible.length === 0;
+      return visible;
     };
-    filters.forEach(button => button.addEventListener('click', () => applyFilter(button.dataset.filter)));
-    applyFilter('all');
+    filters.forEach(button => button.addEventListener('click', () => { activeFilter = button.dataset.filter; applyFilter(); }));
+    search?.addEventListener('input', applyFilter);
+    surprise?.addEventListener('click', () => {
+      const visible = applyFilter();
+      if (!visible.length) return;
+      const picked = visible[Math.floor(Math.random() * visible.length)];
+      games.forEach(card => card.classList.remove('game-picked'));
+      picked.classList.add('game-picked');
+      const heading = picked.querySelector('h3')?.textContent.trim() || '';
+      picked.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center'});
+      picked.focus({preventScroll: true});
+      if (count) count.textContent = isEnglish ? `Your surprise game: ${heading}` : `Os proponemos: ${heading}`;
+      window.setTimeout(() => picked.classList.remove('game-picked'), 2400);
+    });
+    applyFilter();
   }
 
   const year = document.getElementById('year');
