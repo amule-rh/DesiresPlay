@@ -26,8 +26,9 @@ Editorial de bienestar íntimo con influencias de Kinfolk, fotografía cinematog
 ## Estructura editorial
 
 - `/` y `/en/`: hero cinematográfico; idea central; categorías; bloque de conversación y consentimiento; tres juegos de muestra; selección editorial de productos con disclosure; cita; CTA final y Código de la Casa.
-- `/juegos/` y `/en/games/`: exploración de 15 títulos con controles combinables de intensidad, participantes y duración, búsqueda, favoritos y “Sorpréndeme”. Cada ficha tiene enlace permanente.
-- `/juegos/<slug>/` y `/en/games/<slug>/`: quince páginas estáticas bilingües, una por juego, con resumen, duración, personas, instrucciones, consejo de consentimiento, variantes y producto opcional cuando existe una recomendación pertinente.
+- `/juegos/` y `/en/games/`: exploración bilingüe de 21 títulos con controles combinables de intensidad, participantes y duración, búsqueda, favoritos y “Sorpréndeme”. Cada ficha tiene enlace permanente.
+- `/juegos/<slug>/` y `/en/games/<slug>/`: 21 fichas estáticas por idioma, una por juego, con resumen, duración, personas, instrucciones, consejo de consentimiento, variantes y producto opcional cuando existe una recomendación pertinente.
+- `/actividades/` y `/en/quick-activities/`: hub bilingüe con tres actividades locales —bingo de afinidades, pausa con temporizador opcional y generador aleatorio de escenas ficticias—, sin cuentas ni respuestas guardadas.
 - Categorías de juguetes, lubricación y cuidado, bienestar en pareja y lencería: hero fotográfico y contenido editorial en ambos idiomas, con selección comercial señalada cuando aplica.
 - Código de la Casa / House Code: página destacada de principios prácticos, con consentimiento continuo como eje.
 - Afiliación / Affiliate notice: explicación clara de comisiones posibles, independencia editorial, límites de las recomendaciones y relación de compra con terceros.

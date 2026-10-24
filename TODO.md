@@ -9,3 +9,4 @@
 - [x] Conservados el age-gate, los enlaces Awin originales, la navegación accesible, `prefers-reduced-motion`, metadatos y contenido rastreable.
 - [x] Sin dependencias de build; rutas nuevas en `sitemap.xml`; vista previa ES/EN e interacciones comprobadas.
 - [x] Dirección de marca, arquitectura, tokens y componentes documentados en `REDESIGN.md`.
+- [x] Hub bilingüe de tres actividades interactivas: bingo de afinidades, pausa opcional de dos minutos y generador local de escenas; sin cuentas ni respuestas guardadas.
